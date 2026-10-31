@@ -1,23 +1,101 @@
-<svg width="850" height="160" viewBox="0 0 850 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0.5" y="0.5" width="849" height="159" rx="12" fill="#F6F8FA" stroke="#D0D7DE"/>
-  
-  <!-- Status Indicator & Breadcrumb -->
-  <g transform="translate(32, 28)">
-    <circle cx="5" cy="5" r="4" fill="#1A7F37"/>
-    <text x="18" y="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.1em" fill="#57606A">AI ORCHESTRATOR // BUILDER</text>
-    <text x="786" y="9" text-anchor="end" font-family="'SF Mono', Consolas, Monaco, monospace" font-size="11" fill="#57606A">SHIPPING MODE</text>
+<svg width="850" height="180" viewBox="0 0 850 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes islandPulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(0.92); opacity: 0.6; }
+      }
+      @keyframes msg1 {
+        0%, 28% { opacity: 1; transform: translateY(0); }
+        33%, 95% { opacity: 0; transform: translateY(-4px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes msg2 {
+        0%, 31% { opacity: 0; transform: translateY(4px); }
+        36%, 61% { opacity: 1; transform: translateY(0); }
+        66%, 100% { opacity: 0; transform: translateY(-4px); }
+      }
+      @keyframes msg3 {
+        0%, 64% { opacity: 0; transform: translateY(4px); }
+        69%, 94% { opacity: 1; transform: translateY(0); }
+        99%, 100% { opacity: 0; transform: translateY(-4px); }
+      }
+      @keyframes pillBorderGlowLight {
+        0%, 100% { stroke: #D0D7DE; }
+        50% { stroke: #0969DA; }
+      }
+      .island-dot {
+        transform-origin: 345px 33px;
+        animation: islandPulse 2s ease-in-out infinite;
+      }
+      .island-pill {
+        animation: pillBorderGlowLight 4.5s ease-in-out infinite;
+      }
+      .msg-1 { animation: msg1 9s ease-in-out infinite; }
+      .msg-2 { animation: msg2 9s ease-in-out infinite; }
+      .msg-3 { animation: msg3 9s ease-in-out infinite; }
+      
+      @media (prefers-reduced-motion: reduce) {
+        .island-dot, .island-pill, .msg-1, .msg-2, .msg-3 {
+          animation: none !important;
+        }
+        .msg-1 { opacity: 1 !important; transform: none !important; }
+        .msg-2, .msg-3 { display: none !important; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base Container -->
+  <rect x="0.5" y="0.5" width="849" height="179" rx="14" fill="#F6F8FA" stroke="#D0D7DE"/>
+
+  <!-- Left Header Tag -->
+  <g transform="translate(32, 37)">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="0.08em" fill="#57606A">&gt;_ SYSTEM: ONLINE</text>
+  </g>
+
+  <!-- Center: The Vision Pill (Dynamic Island) -->
+  <g class="island-group">
+    <!-- Pill Capsule Body -->
+    <rect class="island-pill" x="325" y="18" width="230" height="30" rx="15" fill="#FFFFFF" stroke="#D0D7DE" stroke-width="1.2"/>
+    
+    <!-- Pulsing Indicator Dot -->
+    <circle class="island-dot" cx="345" cy="33" r="3.5" fill="#1A7F37"/>
+
+    <!-- Morphing Message 1 -->
+    <g class="msg-1">
+      <text x="360" y="37" font-family="'SF Mono', Consolas, Monaco, monospace" font-size="11.5" font-weight="600" fill="#1F2328">pemecut-ai // active</text>
+    </g>
+
+    <!-- Morphing Message 2 -->
+    <g class="msg-2">
+      <text x="360" y="37" font-family="'SF Mono', Consolas, Monaco, monospace" font-size="11.5" font-weight="600" fill="#0969DA">vision-pill // dynamic</text>
+    </g>
+
+    <!-- Morphing Message 3 -->
+    <g class="msg-3">
+      <text x="360" y="37" font-family="'SF Mono', Consolas, Monaco, monospace" font-size="11.5" font-weight="600" fill="#1A7F37">4 projects // shipped</text>
+    </g>
+  </g>
+
+  <!-- Right Header Tag -->
+  <g transform="translate(818, 37)">
+    <text text-anchor="end" font-family="'SF Mono', Consolas, Monaco, monospace" font-size="11" fill="#57606A">AUTONOMOUS SPRINT</text>
   </g>
 
   <!-- Title -->
-  <text x="32" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.03em" fill="#1F2328">@pikri-beep</text>
+  <text x="32" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.03em" fill="#1F2328">@pikri-beep</text>
 
   <!-- Tagline -->
-  <text x="32" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#57606A">Memecut model AI jadi software nyata. Dari desktop utility sampai tactile interface.</text>
+  <text x="32" y="127" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#57606A">Memecut model AI jadi software nyata. Dari desktop utility sampai tactile interface.</text>
 
-  <!-- Meta footer row -->
-  <g transform="translate(32, 134)">
-    <text x="0" y="0" font-family="'SF Mono', Consolas, Monaco, monospace" font-size="11" fill="#0969DA">CORE</text>
-    <text x="42" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#D0D7DE">|</text>
-    <text x="56" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#57606A">Stack tergantung AI: Python, C++, TS, Go, yang penting deliver.</text>
+  <!-- Footer Info Line -->
+  <g transform="translate(32, 154)">
+    <text x="0" y="0" font-family="'SF Mono', Consolas, Monaco, monospace" font-size="11" font-weight="700" fill="#0969DA">FLAGSHIPS</text>
+    <text x="75" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#D0D7DE">|</text>
+    <text x="88" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#57606A">Vision-pill (Windows Dynamic Island)</text>
+    <text x="330" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#D0D7DE">·</text>
+    <text x="342" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#57606A">PocketDesk Remote</text>
+    <text x="475" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#D0D7DE">·</text>
+    <text x="487" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#57606A">SnapMoment</text>
   </g>
 </svg>
